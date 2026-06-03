@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Office Setu</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind Visual Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; }
+    
+    /* Saffron Underline for Setu matching the official brand site layout */
+    .underline-setu {
+      position: relative;
+      display: inline-block;
+    }
+    .underline-setu::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 4px;
+      background-color: #FF6B35;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="text-[#004B23] antialiased">
+
+  <!-- NAVIGATION BAR -->
+   <!-- PREMIUM CENTERED LOGO NAVIGATION BAR -->
+<nav class="w-full bg-white border-b border-slate-100 px-6 py-4 relative z-50">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center">
+    
+    <!-- LEFT COLUMN: Navigation Links (Services & About) -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+      <a href="#services" class="nav-link-underline hover:text-[#004B23] transition-colors py-1">Services</a>
+
+     <a href="/about" class="hover:text-[#FF9933]">About Us</a> </div>
+
+    <!-- MIDDLE COLUMN: Centered Brand Logo Identity -->
+  
+    <div class="flex items-center justify-start md:justify-center">
+      <a href="/" class="flex items-center gap-2 group">
+        <!-- Brand Logo Image Asset -->
+        <img src="/images/BOSLOGO.png" alt="Bharat Office Setu" class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-102">
+        
+      </a>
+    </div>
+
+    <!-- RIGHT COLUMN: User Access Actions (Far Right Alignment) -->
+    <div class="flex items-center justify-end gap-5">
+      <a href="#login" class="text-sm font-bold text-slate-500 hover:text-[#004B23] transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-slate-200 hover:after:bg-[#004B23]">
+        Login
+      </a>
+      <a href="#signup" class="btn-satin-slide group text-xs font-bold tracking-widest uppercase text-white bg-[#004B23] px-5 py-2.5 rounded-xl transition-all">
+        <span class="relative z-10">Sign Up</span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+   
+
+
+  
+  <!-- HERO SECTION (Sized Down to Prevent Area Overcrowding) -->
+
+<!-- SPLIT LAYOUT HERO SECTION (FIXED STRUCTURAL GRID) -->
+<section class="w-full bg-[#FAF9F5] py-12 lg:py-20 px-6 sm:px-12 relative overflow-hidden">
+  <!-- This max-w-7xl and grid layout balances both sides mathematically -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+    
+    <!-- ================= LEFT PANEL: TYPOGRAPHY COMPONENT (7 out of 12 Columns) ================= -->
+    <div class="lg:col-span-7 flex flex-col text-left">
+      
+      <!-- Trust Badge -->
+      <div class="inline-flex items-center gap-2 self-start px-3 py-1 text-[11px] font-semibold bg-[#FF6B35]/10 text-[#FF6B35] rounded-full mb-5">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#FF6B35]"></span>
+        Trusted by 5000+ Businesses Across India
+      </div>
+
+      <!-- Brand Identity Header Sub-text -->
+       <h2 class="text-3xl sm:text-4xl xl:text-5xl font-black tracking-tight text-slate-900 mb-5 leading-[1.15]">
+      
+        Bharat Office <span class="text-[#FF6B35]">Setu</span>
+    </h2>
+
+      <!-- Clean Constrained Main Headline -->
+      <h3 class="text-3xl sm:text-4xl xl:text-5xl font-black tracking-tight text-slate-900 mb-5 leading-[1.15]">
+        Complete Solution for Your <span class="text-[#004B23]">Business</span>
+      </h3>
+
+      <!-- Paragraph Description Description -->
+      <p class="text-slate-500 max-w-lg text-sm sm:text-base leading-relaxed mb-6 tracking-tight">
+        From company registration to compliance and growth services, we help startups and enterprises scale seamlessly.
+      </p>
+
+      <!-- Balanced Human-Touch Conversion Actions -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+        <a href="#consultation-form" class="btn-satin-slide group w-full sm:w-auto text-center px-6 py-3.5 text-xs font-bold tracking-widest uppercase text-white bg-[#004B23] rounded-xl shadow-[0_10px_25px_-10px_rgba(0,75,35,0.3)] hover:bg-[#003819] transition-all">
+          <span class="relative z-10 flex items-center justify-center gap-2">
+            Schedule Consultation 
+            <span class="transition-transform duration-300 ease-out inline-block group-hover:translate-x-1">→</span>
+          </span>
+        </a>
+        
+        <a href="#services" class="w-full sm:w-auto text-center px-6 py-3.5 text-xs font-bold tracking-widest uppercase text-slate-700 bg-white border border-slate-200/80 rounded-xl hover:border-slate-400 hover:text-slate-900 transition-all duration-300 hover:shadow-sm">
+          Explore Services
+        </a>
+      </div>
+
+    </div>
+
+    <!-- ================= RIGHT PANEL: INFRASTRUCTURE CARDS (5 out of 12 Columns) ================= -->
+    <div class="lg:col-span-5 flex flex-col gap-4 mt-8 lg:mt-0">
+      
+      <!-- Feature Block 1: Vision -->
+      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
+        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#004B23] transition-all duration-300 group-hover:w-[6px]"></div>
+        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Strategic Vision</p>
+        <h3 class="text-sm font-bold text-slate-900 leading-snug">
+          India's bridge between <span class="text-[#FF6B35]">ambition</span> and <span class="text-[#004B23]">office</span>.
+        </h3>
+      </div>
+
+      <!-- Feature Block 2: GST Timeline -->
+      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
+        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#FF6B35] transition-all duration-300 group-hover:w-[6px]"></div>
+        <div class="flex items-center justify-between gap-4 mb-1.5">
+          <h4 class="text-sm font-bold text-slate-900">Your business, set up in 48 hours.</h4>
+          <span class="text-[9px] font-extrabold tracking-widest text-white bg-[#FF6B35] px-2 py-0.5 rounded uppercase shrink-0">
+            GST in 48 Hrs
+          </span>
+        </div>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Fast-track incorporation combined with direct commercial tax pipelines to bypass traditional queues.
+        </p>
+      </div>
+
+      <!-- Feature Block 3: Offices Suite -->
+      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
+        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#004B23] transition-all duration-300 group-hover:w-[6px]"></div>
+        <div class="flex items-center justify-between gap-4 mb-1.5">
+          <h4 class="text-sm font-bold text-slate-900">Managed Private Offices</h4>
+          <span class="text-[9px] font-extrabold tracking-widest text-white bg-[#004B23] px-2 py-0.5 rounded uppercase shrink-0">
+            Fully Serviced
+          </span>
+        </div>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Branded office suites for teams of all sizes. Built with premium reception, enterprise internet, and maintenance included.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<div class="-mt-16 md:-mt-24 relative z-10">
+  <%- include('insights') %>
+</div>
+</section>
+
+  
+  <!-- SERVICES GRID SECTION -->
+  <!-- BHARAT OFFICE SETU: HIGH-END PREMIUM SERVICES ECOSYSTEM (OLIVE PALETTE) -->
+<section id="services" class="w-full bg-[#FAF9F5] pb-24 pt-12 px-6 sm:px-12 relative overflow-hidden scroll-mt-24 -mt-16">
+  
+  <!-- Subtle Architectural Layer: Soft layout lines in olive tint -->
+  <div class="absolute inset-0 opacity-[0.015] pointer-events-none bg-[linear-gradient(to_right,#3C4E3A_1px,transparent_1px),linear-gradient(to_bottom,#3C4E3A_1px,transparent_1px)] [background-size:3rem_3rem]"></div>
+  
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Sophisticated Asymmetric Section Header Layout -->
+     <section id="services" class="max-w-6xl mx-auto px-6 py-12">
+    <div class="text-center mb-12">
+      <h2 class="text-xs font-bold text-[#FF6B35] uppercase tracking-widest">Our Offerings</h2>
+      <h3 class="text-2xl font-extrabold tracking-tight text-[#004B23] mt-2">Services We Provide</h3>
+    </div>
+    
+    <!-- Responsive Layout: 1 Col (Mobile) -> 2 Col (Tablet) -> 4 Col (Desktop) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- CARD 1: COMPANY SETUP -->
+      <div class="saas-service-card bg-white border border-slate-200/60 p-7 rounded-2xl flex flex-col justify-between min-h-[290px] group cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#3C4E3A]/30 hover:shadow-[0_20px_40px_-15px_rgba(60,78,58,0.08)]">
+        <div>
+          <!-- Icon Container with Olive Tint Base -->
+          <div class="saas-icon-wrapper w-11 h-11 rounded-xl bg-[#3C4E3A]/5 text-[#3C4E3A] flex items-center justify-center mb-6 border border-[#3C4E3A]/10 shadow-sm transition-all duration-500 group-hover:bg-[#3C4E3A] group-hover:text-white group-hover:scale-105 group-hover:rotate-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 tracking-tight mb-2.5">Company Setup</h3>
+          <p class="text-xs text-slate-500 leading-relaxed tracking-tight">Start your business easily with structured, custom-tailored regulatory compliance guidelines.</p>
+        </div>
+        <!-- Micro-Interaction Arrow appearing smoothly on hover -->
+        <div class="flex items-center gap-1.5 pt-4 mt-4 border-t border-slate-50 text-[11px] font-bold text-[#3C4E3A]">
+          <span>Initialize Process</span>
+          <span class="transition-all duration-300 transform translate-x-0 opacity-70 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+        </div>
+      </div>
+
+      <!-- CARD 2: COMPLIANCE -->
+      <div class="saas-service-card bg-white border border-slate-200/60 p-7 rounded-2xl flex flex-col justify-between min-h-[290px] group cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#3C4E3A]/30 hover:shadow-[0_20px_40px_-15px_rgba(60,78,58,0.08)]">
+        <div>
+          <div class="saas-icon-wrapper w-11 h-11 rounded-xl bg-[#3C4E3A]/5 text-[#3C4E3A] flex items-center justify-center mb-6 border border-[#3C4E3A]/10 shadow-sm transition-all duration-500 group-hover:bg-[#3C4E3A] group-hover:text-white group-hover:scale-105 group-hover:rotate-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 tracking-tight mb-2.5">Compliance</h3>
+          <p class="text-xs text-slate-500 leading-relaxed tracking-tight">Legal & taxation support configured continuously by seasoned central domain professionals.</p>
+        </div>
+        <div class="flex items-center gap-1.5 pt-4 mt-4 border-t border-slate-50 text-[11px] font-bold text-[#3C4E3A]">
+          <span>Configure Stack</span>
+          <span class="transition-all duration-300 transform translate-x-0 opacity-70 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+        </div>
+      </div>
+
+      <!-- CARD 3: WORKSPACE -->
+      <div class="saas-service-card bg-white border border-slate-200/60 p-7 rounded-2xl flex flex-col justify-between min-h-[290px] group cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#3C4E3A]/30 hover:shadow-[0_20px_40px_-15px_rgba(60,78,58,0.08)]">
+        <div>
+          <div class="saas-icon-wrapper w-11 h-11 rounded-xl bg-[#3C4E3A]/5 text-[#3C4E3A] flex items-center justify-center mb-6 border border-[#3C4E3A]/10 shadow-sm transition-all duration-500 group-hover:bg-[#3C4E3A] group-hover:text-white group-hover:scale-105 group-hover:rotate-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 tracking-tight mb-2.5">Workspace</h3>
+          <p class="text-xs text-slate-500 leading-relaxed tracking-tight">Flexible asset-light office solutions built for instant cross-country corporate location scaling.</p>
+        </div>
+        <div class="flex items-center gap-1.5 pt-4 mt-4 border-t border-slate-50 text-[11px] font-bold text-[#3C4E3A]">
+          <span>Explore Locations</span>
+          <span class="transition-all duration-300 transform translate-x-0 opacity-70 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+        </div>
+      </div>
+
+      <!-- CARD 4: GROWTH -->
+      <div class="saas-service-card bg-white border border-slate-200/60 p-7 rounded-2xl flex flex-col justify-between min-h-[290px] group cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.01)] transition-all duration-500 ease-out hover:-translate-y-1.5 hover:border-[#3C4E3A]/30 hover:shadow-[0_20px_40px_-15px_rgba(60,78,58,0.08)]">
+        <div>
+          <div class="saas-icon-wrapper w-11 h-11 rounded-xl bg-[#3C4E3A]/5 text-[#3C4E3A] flex items-center justify-center mb-6 border border-[#3C4E3A]/10 shadow-sm transition-all duration-500 group-hover:bg-[#3C4E3A] group-hover:text-white group-hover:scale-105 group-hover:rotate-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 tracking-tight mb-2.5">Growth</h3>
+          <p class="text-xs text-slate-500 leading-relaxed tracking-tight">Accelerate cross-market corporate expansion operations and general enterprise performance.</p>
+        </div>
+        <div class="flex items-center gap-1.5 pt-4 mt-4 border-t border-slate-50 text-[11px] font-bold text-[#3C4E3A]">
+          <span>Scale Up</span>
+          <span class="transition-all duration-300 transform translate-x-0 opacity-70 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- Example of what your home.ejs probably looks like -->
+
+
+  
+  <!-- BHARAT OFFICE SETU OPERATING HUBS DASHBOARD -->
+
+<!-- Integration Point -->
+ <!-- Inside home.ejs -->
+  
+<section >
+  <%- include('hubs-map') %>
+</section>
+
+          
+  
+       <!-- STANDALONE CONSULTATION ARRANGEMENT FORM CONTAINER -->
+    
+<!-- Enhanced Strategy Form -->
+<div class="bg-white p-6 md:p-12 rounded-[2rem] border border-slate-200 shadow-sm">
+  <h2 class="text-3xl font-black text-[#3C4E3A] mb-2">Book Strategy Briefing</h2>
+  <p class="text-slate-500 mb-8">Select your parameters to align with a dedicated corporate intake officer.</p>
+
+  <form class="space-y-8">
+    
+    <!-- 1. Selection Grid -->
+    <div>
+      <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Select Scope of Consultation</label>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <label class="relative border-2 border-[#3C4E3A] rounded-2xl p-6 cursor-pointer bg-green-50/30">
+          <input type="radio" name="scope" class="absolute top-4 right-4 accent-[#3C4E3A]" checked>
+          <span class="block font-bold text-[#3C4E3A]">Firm Incorporation</span>
+          <span class="block text-xs text-slate-500 mt-1">GST setup, Pvt Ltd, corporate files</span>
+        </label>
+        <label class="relative border-2 border-slate-200 rounded-2xl p-6 cursor-pointer hover:border-[#3C4E3A] transition-all">
+          <input type="radio" name="scope" class="absolute top-4 right-4 accent-[#3C4E3A]">
+          <span class="block font-bold text-[#3C4E3A]">Private Managed Office</span>
+          <span class="block text-xs text-slate-500 mt-1">Physical workspace infrastructure</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 2. Date & Time -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Target Date</label>
+        <input type="date" class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 outline-none focus:border-[#3C4E3A]">
+      </div>
+      <div>
+        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Executive Session Slot</label>
+        <select class="w-full bg-slate-50 border border-slate-200 rounded-xl p-3 outline-none focus:border-[#3C4E3A]">
+          <option>Morning Block (10:00 AM IST)</option>
+          <option>Afternoon Block (02:00 PM IST)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 3. Executive Info -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <input type="text" placeholder="Authorized Name" class="bg-slate-50 border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-[#3C4E3A]/20">
+      <input type="email" placeholder="Corporate Email" class="bg-slate-50 border border-slate-200 rounded-xl p-3 outline-none focus:ring-2 focus:ring-[#3C4E3A]/20">
+    </div>
+
+    <textarea placeholder="Briefly highlight any specific operational priorities or goals..." class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 h-24 outline-none focus:ring-2 focus:ring-[#3C4E3A]/20"></textarea>
+
+    <button type="submit" class="w-full bg-[#3C4E3A] text-white font-bold py-4 rounded-xl hover:bg-[#FF9933] transition-all duration-300 flex items-center justify-center gap-2">
+      CONFIRM & LOCK CONSULTATION SLOT →
+    </button>
+  </form>
+</div>
+<!-- Insert your About section here -->
+<%- include('about') %>
+<!-- PREMIUM FOOTER AREA -->
+  <footer class="bg-gradient-to-b from-white to-slate-50 border-t border-slate-200 mt-20 px-6 py-12">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left Side: Mini Branding -->
+      <div class="flex items-center gap-3">
+        <img src="/images/BOSLOGO.png" alt="BOS Mini Logo" class="h-10 w-auto object-contain opacity-80">
+        <p class="text-sm text-slate-500 font-medium">
+          © 2026 <span class="font-bold text-[#004B23]">Bharat Office Setu</span></span> Private Limited. All rights reserved.
+        </p>
+      </div>
+
+      <!-- Right Side: Secondary Minimal Links -->
+      <div class="flex items-center gap-6 text-xs font-semibold text-slate-500">
+        <a href="#about" class="hover:text-[#FF6B35] no-underline transition-colors">Privacy Policy</a>
+        <a href="#services" class="hover:text-[#FF6B35] no-underline transition-colors">Terms of Service</a>
+        <a href="#contact" class="hover:text-[#FF6B35] no-underline transition-colors">Support Helpline</a>
+      </div>
+
+    </div>
+  </footer>
+</body>
+</html>
