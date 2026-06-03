@@ -14,7 +14,68 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; }
+
+    .wave-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(180deg, #519c6f 0%, #256e43 70%, #937131 100%);
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      left: 0;
+      width: 200%;
+      height: 220px;
+      background-repeat: repeat;
+      background-position: 0 bottom;
+      animation: wave 18s linear infinite;
+    }
+
+    .wave1 {
+      bottom: -20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23FF6B35' fill-opacity='0.25' d='M0,192L48,197.3C96,203,192,213,288,213.3C384,213,480,203,576,181.3C672,160,768,128,864,133.3C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      animation-duration: 22s;
+      opacity: 0.6;
+    }
+
+    .wave2 {
+      bottom: 40px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23FF8C42' fill-opacity='0.35' d='M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,186.7C960,203,1056,213,1152,202.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      animation-duration: 28s;
+      opacity: 0.5;
+    }
+
+    .wave3 {
+      bottom: 100px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23FF6B35' fill-opacity='0.2' d='M0,256L48,245.3C96,235,192,213,288,213.3C384,213,480,235,576,234.7C672,235,768,213,864,197.3C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      animation-duration: 16s;
+      animation-direction: reverse;
+      opacity: 0.4;
+    }
+
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .liquid-shine {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 40%, rgba(227, 139, 107, 0.12) 50%, transparent 60%);
+      background-size: 200% 100%;
+      animation: liquidShine 10s linear infinite;
+    }
+
+    @keyframes liquidShine {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #d39e86af; }
     
     /* Saffron Underline for Setu matching the official brand site layout */
     .underline-setu {
@@ -35,6 +96,18 @@
 </head>
 <body class="text-[#004B23] antialiased">
 
+
+<div class="wave-bg">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+    <div class="liquid-shine"></div>
+  </div>
+<div class="relative z-10">
+    <!-- Your page content -->
+  </div>
+
+
   <!-- NAVIGATION BAR -->
    <!-- PREMIUM CENTERED LOGO NAVIGATION BAR -->
 <nav class="w-full bg-white border-b border-slate-100 px-6 py-4 relative z-50">
@@ -42,7 +115,7 @@
     
     <!-- LEFT COLUMN: Navigation Links (Services & About) -->
     <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-      <a href="#services" class="nav-link-underline hover:text-[#004B23] transition-colors py-1">Services</a>
+      <a href="#services" class="nav-link-underline hover:text-[#FF9933] transition-colors py-1">Services</a>
 
      <a href="/about" class="hover:text-[#FF9933]">About Us</a> </div>
 
@@ -73,9 +146,18 @@
 
   
   <!-- HERO SECTION (Sized Down to Prevent Area Overcrowding) -->
+<!-- Particles Canvas -->
+    
+  <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <i class="fas fa-chevron-down text-4xl text-white/60"></i>
+    </div>
+  </section>
 
 <!-- SPLIT LAYOUT HERO SECTION (FIXED STRUCTURAL GRID) -->
-<section class="w-full bg-[#FAF9F5] py-12 lg:py-20 px-6 sm:px-12 relative overflow-hidden">
+ 
+    
+<section class="w-full bg-[#f5e1d5] py-12 lg:py-20 px-6 sm:px-12 relative overflow-hidden">
   <!-- This max-w-7xl and grid layout balances both sides mathematically -->
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
     
@@ -106,12 +188,13 @@
 
       <!-- Balanced Human-Touch Conversion Actions -->
       <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-        <a href="#consultation-form" class="btn-satin-slide group w-full sm:w-auto text-center px-6 py-3.5 text-xs font-bold tracking-widest uppercase text-white bg-[#004B23] rounded-xl shadow-[0_10px_25px_-10px_rgba(0,75,35,0.3)] hover:bg-[#003819] transition-all">
-          <span class="relative z-10 flex items-center justify-center gap-2">
-            Schedule Consultation 
-            <span class="transition-transform duration-300 ease-out inline-block group-hover:translate-x-1">→</span>
-          </span>
-        </a>
+  
+        <a href="/#consultation-section" class="btn-satin-slide group w-full sm:w-auto text-center px-6 py-3.5 text-xs font-bold tracking-widest uppercase text-white bg-[#004B23] rounded-xl shadow-[0_10px_25px_-10px_rgba(0,75,35,0.3)] hover:bg-[#FF9933] transition-all duration-300">
+  <span class="relative z-10 flex items-center justify-center gap-2">
+    Schedule Consultation 
+    <span class="transition-transform duration-300 ease-out inline-block group-hover:translate-x-1">→</span>
+  </span>
+</a>
         
         <a href="#services" class="w-full sm:w-auto text-center px-6 py-3.5 text-xs font-bold tracking-widest uppercase text-slate-700 bg-white border border-slate-200/80 rounded-xl hover:border-slate-400 hover:text-slate-900 transition-all duration-300 hover:shadow-sm">
           Explore Services
@@ -121,47 +204,19 @@
     </div>
 
     <!-- ================= RIGHT PANEL: INFRASTRUCTURE CARDS (5 out of 12 Columns) ================= -->
-    <div class="lg:col-span-5 flex flex-col gap-4 mt-8 lg:mt-0">
+    <!-- Social Proof -->
+  
+
+    
       
-      <!-- Feature Block 1: Vision -->
-      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
-        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#004B23] transition-all duration-300 group-hover:w-[6px]"></div>
-        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Strategic Vision</p>
-        <h3 class="text-sm font-bold text-slate-900 leading-snug">
-          India's bridge between <span class="text-[#FF6B35]">ambition</span> and <span class="text-[#004B23]">office</span>.
-        </h3>
-      </div>
+    
+<!-- Right Panel Grid -->
 
-      <!-- Feature Block 2: GST Timeline -->
-      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
-        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#FF6B35] transition-all duration-300 group-hover:w-[6px]"></div>
-        <div class="flex items-center justify-between gap-4 mb-1.5">
-          <h4 class="text-sm font-bold text-slate-900">Your business, set up in 48 hours.</h4>
-          <span class="text-[9px] font-extrabold tracking-widest text-white bg-[#FF6B35] px-2 py-0.5 rounded uppercase shrink-0">
-            GST in 48 Hrs
-          </span>
-        </div>
-        <p class="text-xs text-slate-500 leading-relaxed">
-          Fast-track incorporation combined with direct commercial tax pipelines to bypass traditional queues.
-        </p>
-      </div>
 
-      <!-- Feature Block 3: Offices Suite -->
-      <div class="relative bg-white border border-slate-200/60 p-5 rounded-2xl shadow-sm transition-all duration-300 hover:border-slate-300 hover:shadow-md overflow-hidden group bg-white">
-        <div class="absolute top-0 left-0 h-full w-[4px] bg-[#004B23] transition-all duration-300 group-hover:w-[6px]"></div>
-        <div class="flex items-center justify-between gap-4 mb-1.5">
-          <h4 class="text-sm font-bold text-slate-900">Managed Private Offices</h4>
-          <span class="text-[9px] font-extrabold tracking-widest text-white bg-[#004B23] px-2 py-0.5 rounded uppercase shrink-0">
-            Fully Serviced
-          </span>
-        </div>
-        <p class="text-xs text-slate-500 leading-relaxed">
-          Branded office suites for teams of all sizes. Built with premium reception, enterprise internet, and maintenance included.
-        </p>
-      </div>
+  
+    
 
-    </div>
-
+</div>
   </div>
 </section>
 <div class="-mt-16 md:-mt-24 relative z-10">
@@ -172,7 +227,7 @@
   
   <!-- SERVICES GRID SECTION -->
   <!-- BHARAT OFFICE SETU: HIGH-END PREMIUM SERVICES ECOSYSTEM (OLIVE PALETTE) -->
-<section id="services" class="w-full bg-[#FAF9F5] pb-24 pt-12 px-6 sm:px-12 relative overflow-hidden scroll-mt-24 -mt-16">
+<section id="services" class="w-full bg-[#408f5a] pb-24 pt-12 px-6 sm:px-12 relative overflow-hidden scroll-mt-24 -mt-16">
   
   <!-- Subtle Architectural Layer: Soft layout lines in olive tint -->
   <div class="absolute inset-0 opacity-[0.015] pointer-events-none bg-[linear-gradient(to_right,#3C4E3A_1px,transparent_1px),linear-gradient(to_bottom,#3C4E3A_1px,transparent_1px)] [background-size:3rem_3rem]"></div>
@@ -182,8 +237,8 @@
     <!-- Sophisticated Asymmetric Section Header Layout -->
      <section id="services" class="max-w-6xl mx-auto px-6 py-12">
     <div class="text-center mb-12">
-      <h2 class="text-xs font-bold text-[#FF6B35] uppercase tracking-widest">Our Offerings</h2>
-      <h3 class="text-2xl font-extrabold tracking-tight text-[#004B23] mt-2">Services We Provide</h3>
+      <h2 class="text-l font-bold text-[#052915] uppercase tracking-widest">Our Offerings</h2>
+      <h3 class="text-2xl font-extrabold tracking-tight text-[#052915] mt-2">Services We Provide</h3>
     </div>
     
     <!-- Responsive Layout: 1 Col (Mobile) -> 2 Col (Tablet) -> 4 Col (Desktop) -->
@@ -271,9 +326,10 @@
           
   
        <!-- STANDALONE CONSULTATION ARRANGEMENT FORM CONTAINER -->
-    
+    <section id="consultation-section" class="py-20 bg-slate-50">
+  
 <!-- Enhanced Strategy Form -->
-<div class="bg-white p-6 md:p-12 rounded-[2rem] border border-slate-200 shadow-sm">
+<div class="bg-[#f5e1d5] p-6 md:p-12 rounded-[2rem] border border-slate-200 shadow-sm">
   <h2 class="text-3xl font-black text-[#3C4E3A] mb-2">Book Strategy Briefing</h2>
   <p class="text-slate-500 mb-8">Select your parameters to align with a dedicated corporate intake officer.</p>
 
@@ -324,6 +380,11 @@
     </button>
   </form>
 </div>
+    </section>
+
+
+
+    
 <!-- Insert your About section here -->
 <%- include('about') %>
 <!-- PREMIUM FOOTER AREA -->
